@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=IBM+Plex+Sans:wght@400;600;800&display=swap');
 
 body{
     box-sizing: border-box;
@@ -14,13 +14,20 @@ nav{
 }
 
 nav a{
-    padding: 1rem 0.5rem;
+    padding: 2rem 0.5rem;
     text-decoration: none;
-    color: #2C3E50;
+    color: #212F3D;
+    font-size: 1.025rem;
+}
+
+nav{
+    a:hover{
+        color: aqua;
+    }
 }
 
 nav a:visited{
-    color: #2C3E50;
+    color: #212F3D;
 }
 
 #heroBox{
@@ -32,12 +39,14 @@ nav a:visited{
 }
 
 #hero-h1{
-    font-family: Poppins;
+    font-family: "IBM Plex Sans", "sans-serif";
     font-size: 2.5rem;
+    font-weight: 600;
 }
 
 #hero-p{
     font-family: Inter, 'sans-serif';
+    font-size: large;
 }
 
 .socialLink{
@@ -49,11 +58,131 @@ nav a:visited{
     padding-left: 1rem;
 }
 
+.mobile-nav{
+    display: none;
+}
+
+.desktop-nav{
+    display: flex;
+}
+
+.menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    a {
+      text-decoration: none;
+      color: #232323;
+      transition: all 0.3s ease;
+    }
+    input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      cursor: pointer;
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+      -webkit-touch-callout: none;
+    }
+    span {
+      position: relative;
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #2A3B30;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+    }
+  }
+
+  .menuToggle {
+    input {
+      &:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #2C3E50;
+        &:nth-last-child(3) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        &:nth-last-child(2) {
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+      }
+      &:checked ~ .menuItem {
+        transform: none;
+      }
+    }
+  }
+
+  .menuItem {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 125px;
+    background: #FFFFFF;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    li {
+      padding: 10px 0;
+      font-size: 22px;
+    }
+  }
+
+  .menu--right {
+    .menuToggle {
+      position: fixed;
+      right: 0;
+      input {
+        right: 50px;
+      }
+      span {
+        right: 50px;
+      }
+    }
+    .menuItem {
+      right: 0;
+      margin: -100px 0 0 0;
+      transform: translate(100%, 0);
+      
+    }
+  }
+
 /* MEDIA QUERY */
 
 @media(max-width: 650px){
     #heroBox{
-        margin-left: 2rem;
+        margin-left: 1rem;
         margin-top: 5rem;
+        padding-right: 4rem;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: block;
     }
 }
+
+
+
