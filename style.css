@@ -6,27 +6,22 @@ body{
     margin: 0;
 }
 
-nav{
+#desktop-navbar{
     display: flex;
     justify-content: center;
     align-self: center;
     font-family: Inter, 'sans-serif';
 }
 
-nav a{
+#desktop-navbar a{
     padding: 2rem 0.5rem;
     text-decoration: none;
     color: #212F3D;
     font-size: 1.025rem;
 }
 
-nav{
-    a:hover{
-        color: aqua;
-    }
-}
 
-nav a:visited{
+#desktop-navbar a:visited{
     color: #212F3D;
 }
 
@@ -175,7 +170,7 @@ nav a:visited{
         padding-right: 4rem;
     }
 
-    .desktop-nav{
+    #desktop-navbar{
         display: none;
     }
 
