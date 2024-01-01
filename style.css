@@ -139,6 +139,7 @@ body{
     li {
       padding: 10px 0;
       font-size: 22px;
+      font-family: Inter, "sans-serif";
     }
   }
 
@@ -170,12 +171,24 @@ body{
         padding-right: 4rem;
     }
 
+    #hero-h1{
+        font-size: 3rem;
+    }
+
+    #hero-p{
+        font-size: 1.2rem;
+    }
+
     #desktop-navbar{
         display: none;
     }
 
     .mobile-nav{
         display: block;
+    }
+
+    .linkBox{
+        margin-top: 2rem;;
     }
 }
 
