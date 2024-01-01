@@ -36,6 +36,10 @@ nav a:visited{
     font-size: 2.5rem;
 }
 
+#hero-p{
+    font-family: Inter, 'sans-serif';
+}
+
 .socialLink{
     color: #2C3E50;
 
