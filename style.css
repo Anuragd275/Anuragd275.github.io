@@ -21,16 +21,16 @@ body{
 }
 
 
-#desktop-navbar a:visited{
-    color: #212F3D;
-}
-
 #heroBox{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 10rem;
-    margin-top: 10rem;
+    margin-top: 8rem;
+}
+
+.projectHero{
+  margin-top: 4rem !important;
 }
 
 #hero-h1{
@@ -42,10 +42,12 @@ body{
 #hero-p{
     font-family: Inter, 'sans-serif';
     font-size: large;
+    color: #393E46;
+    
 }
 
 .socialLink{
-    color: #2C3E50;
+    color: #393E46;
 
 }
 
@@ -164,11 +166,66 @@ body{
     }
   }
 
+
+
+/* PROJECTS.HTML */
+
+#projectBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7.5rem;
+}
+
+.projectWrapper{
+  padding: 1rem 2rem 2rem 1rem;
+  border: 1px solid #FFFFFF;
+}
+
+.projectWrapper:hover{
+  background-color: #f7f8fa;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.outerWrapper{
+  padding: 1.5rem;
+  margin-right: 2rem;
+}
+
+.projectLink{
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #0f1021;
+  border: 1px solid #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+.urlDiv{
+  margin-top: 2rem;
+}
+
+.projectLink:hover{
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+
+.projectTitle{
+  font-size: 1rem;
+}
+
+.descText{
+  font-size: 0.9rem;
+}
+
 /* MEDIA QUERY */
 
 @media(max-width: 650px){
     #heroBox{
-        margin-left: 1rem;
+        margin-left: 1.5rem;
         margin-top: 5rem;
         padding-right: 4rem;
     }
@@ -192,7 +249,15 @@ body{
     .linkBox{
         margin-top: 2rem;;
     }
-}
 
+    #projectBox{
+      flex-direction: column;
+      margin-left: 0;
+    }
+
+    .outerWrapper{
+      padding-left: 0.5rem;
+    }
+}
 
 

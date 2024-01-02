@@ -11,12 +11,17 @@
       crossorigin="anonymous"
     ></script>
     <title>Projects - Anurag</title>
+    <style>
+      #projectNavLink {
+        color: #3f72af;
+      }
+    </style>
   </head>
   <body>
     <div class="desktop-nav" id="desktop-navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" id="projectNavLink">Projects</a>
     </div>
     <nav class="menu--right mobile-nav" role="navigation">
       <div class="menuToggle">
@@ -34,5 +39,83 @@
         </ul>
       </div>
     </nav>
+    <section id="heroBox" class="projectHero">
+      <div class="hero-text">
+        <h1 id="hero-h1">
+          Things I've made trying to put my dent in the universe.
+        </h1>
+      </div>
+      <div class="hero-subtext">
+        <p id="hero-p">
+          I've worked on tons of little projects over the years but these are
+          the ones that I'm most proud of.<br />
+          Many of them are open-source, so if you see something that piques your
+          interest,<br />
+          check out the code and contribute if you have ideas for how it can be
+          improved.
+        </p>
+      </div>
+    </section>
+    <section id="projectBox">
+      <!-- 1 -->
+      <div class="outerWrapper">
+        <div class="projectWrapper">
+          <div class="projectName">
+            <h1 class="projectTitle">Jio Saavn Bot</h1>
+          </div>
+          <div class="projectDesc">
+            <p class="descText">
+              A Telegram Bot developed with Python to download any song
+              available on Jio Saavn.
+            </p>
+          </div>
+          <div class="urlDiv">
+            <a href="t.me/jio_saavn_songs_bot" class="projectLink"
+              >Visit Project</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="outerWrapper">
+        <div class="projectWrapper">
+          <div class="projectName">
+            <h1 class="projectTitle">Office Quotes API</h1>
+          </div>
+          <div class="projectDesc">
+            <p class="descText">
+              A RESTful API to deliever some of the popular Quotes from the TV
+              Series "The Office".
+            </p>
+          </div>
+          <div class="urlDiv">
+            <a
+              href="https://office-quotes-api.onrender.com/"
+              class="projectLink"
+              >Visit Project</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="outerWrapper">
+        <div class="projectWrapper">
+          <div class="projectName">
+            <h1 class="projectTitle">Password Generator</h1>
+          </div>
+          <div class="projectDesc">
+            <p class="descText">
+              A simple JavaScript Web app that can generate strong passwords
+              with multiple varieties.
+            </p>
+          </div>
+          <div class="urlDiv">
+            <a href="https://pass-generator-chi.vercel.app/" class="projectLink"
+              >Visit Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
