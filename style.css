@@ -176,12 +176,12 @@ body{
   justify-content: center;
   align-items: center;
   margin-left: 7.5rem;
-  font-family: Inter, "sans-serif";
 }
 
 .projectWrapper{
   padding: 1rem 2rem 2rem 1rem;
   border: 1px solid #FFFFFF;
+  font-family: Inter, "sans-serif";
 }
 
 .projectWrapper:hover{
