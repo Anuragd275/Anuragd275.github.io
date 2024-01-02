@@ -87,14 +87,14 @@ body{
     span {
       position: relative;
       display: block;
-      width: 33px;
-      height: 4px;
-      margin-bottom: 5px;
+      width: 25px;
+      height: 3px;
+      margin-bottom: 4px;
       position: relative;
       background: #2A3B30;
-      border-radius: 3px;
+      border-radius: 2px;
       z-index: 1;
-      transform-origin: 4px 0px;
+      transform-origin: 3px 0px;
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
       &:first-child {
@@ -137,8 +137,9 @@ body{
     transform-origin: 0% 0%;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     li {
-      padding: 10px 0;
-      font-size: 22px;
+      padding: 10px 0 20px 120px;
+      font-size: 16px;
+      font-weight: 600;
       font-family: Inter, "sans-serif";
     }
   }
@@ -148,13 +149,14 @@ body{
       position: fixed;
       right: 0;
       input {
-        right: 50px;
+        right: 20px;
       }
       span {
-        right: 50px;
+        right: 20px;
       }
     }
     .menuItem {
+      padding-right: 60px;
       right: 0;
       margin: -100px 0 0 0;
       transform: translate(100%, 0);
