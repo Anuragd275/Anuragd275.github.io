@@ -6,6 +6,7 @@ body{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background-color: #F0F8FF;
 }
 
 #desktop-navbar{
@@ -136,7 +137,7 @@ body{
     width: 100vw;
     height: 100vh;
     padding-top: 125px;
-    background: #FFFFFF;
+    background: #F0F8FF;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;

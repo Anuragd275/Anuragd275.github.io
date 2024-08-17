@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Anurag Dubey's GitHub Page" />
-    <meta name="google-site-verification" content="O-SYicqr92HdfFs7yhEH7WkwLBYTecSiykG3uDhDYF0" />
+    <meta
+      name="google-site-verification"
+      content="O-SYicqr92HdfFs7yhEH7WkwLBYTecSiykG3uDhDYF0"
+    />
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <script
@@ -14,11 +24,12 @@
     ></script>
     <title>Anurag Dubey</title>
   </head>
-  <body>
+  <body class="light">
     <div class="desktop-nav" id="desktop-navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
+      <a href="#" id="themeToggler" onclick="toggleTheme()">Dark Theme</a>
     </div>
     <nav class="menu--right mobile-nav" role="navigation">
       <div class="menuToggle">
@@ -39,6 +50,12 @@
 
           <li>
             <a href="projects.html">Projects</a>
+            <hr />
+          </li>
+          <li>
+            <a href="#" id="themeToggler" onclick="toggleTheme();"
+              >Dark Theme</a
+            >
             <hr />
           </li>
         </ul>
@@ -74,5 +91,6 @@
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
