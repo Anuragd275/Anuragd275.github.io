@@ -29,16 +29,14 @@ function toggleTheme() {
     let h1Elements = document.querySelectorAll("h1");
     let pElements = document.querySelectorAll("p");
     let iconElements = document.querySelectorAll("i");
-    let docbody = document.body
-    let themeToggler = document.getElementById("themeToggler")
-
+    let docbody = document.body;
+    let themeToggler = document.getElementById("themeToggler");
+    
     if (bodyClass.contains("light")) {
         console.log("Currently in Light Mode");
         // Switch to dark mode
         bodyClass.remove("light");
         bodyClass.add("dark");
-
-
 
         // Update styles for dark mode
         docbody.style.backgroundColor = "black"
