@@ -1,26 +1,3 @@
-// function toggleTheme() {
-//     // Check if body has class "dark"
-
-//     let bodyClass = document.body.className;
-    
-//     // Gather elements to be changed
-//     let h1Elements = document.querySelectorAll("h1")
-//     let pElements = document.querySelectorAll("p")
-//     let iconElements = document.querySelectorAll("i")
-
-//     console.log(h1Elements)
-
-//     if (bodyClass == "light") {
-//         console.log("Curently in Light Mode")
-//         bodyClass.classList.remove("light");
-//         bodyClass.classList.add("dark");
-//     } else {
-//         h1Elements.style.color = "black"
-//     }
-    
-//     console.log(bodyClass);
-// }
-
 function toggleTheme() {
     // Check if body has class "dark"
     let bodyClass = document.body.classList;
