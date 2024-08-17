@@ -31,7 +31,7 @@ function toggleTheme() {
     let iconElements = document.querySelectorAll("i");
     let docbody = document.body;
     let themeToggler = document.getElementById("themeToggler");
-    
+    let anchorElements = document.querySelectorAll("a");
     if (bodyClass.contains("light")) {
         console.log("Currently in Light Mode");
         // Switch to dark mode
@@ -44,6 +44,7 @@ function toggleTheme() {
         h1Elements.forEach(h1 => h1.style.color = "white");
         pElements.forEach(p => p.style.color = "lightgray");
         iconElements.forEach(icon => icon.style.color = "white");
+        anchorElements.forEach(a => a.style.color = "white")
 
     } else {
         console.log("Currently in Dark Mode");
@@ -57,5 +58,7 @@ function toggleTheme() {
         h1Elements.forEach(h1 => h1.style.color = "black");
         pElements.forEach(p => p.style.color = "black");
         iconElements.forEach(icon => icon.style.color = "black");
+        anchorElements.forEach(a => a.style.color = "black")
+
     }
 }
