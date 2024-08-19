@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <title>Anurag Dubey - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/991ac3604a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body,
+      nav {
+        font-family: Inter;
+      }
+
+      /* Custom transition classes for smooth slide effect */
+      .menu-hidden {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .menu-visible {
+        max-height: 100vh;
+        transition: max-height 0.6s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F0F8FF] text-black dark:bg-[#000000] text-white">
+    <nav class="p-4">
+      <div
+        class="container mx-auto flex justify-end md:justify-center items-center"
+      >
+        <!-- Logo -->
+        <!-- <div class="text-black text-xl font-bold">Logo</div> -->
+
+        <!-- Menu (Hidden on small screens) -->
+        <ul class="hidden md:flex space-x-8 text-black dark:text-white">
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
+          <li><a href="project.html" class="hover:text-gray-700">Projects</a></li>
+          <li><a href="contact.html" class="hover:text-gray-700">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Icon (Visible on small screens) -->
+        <div
+          class="bg-[#F0F8FF] text-black dark:bg-[#000000] text-white md:hidden"
+        >
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 text-black dark:text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div id="mobile-menu" class="h-screen menu-hidden md:hidden">
+        <ul
+          class="flex flex-col space-y-4 text-black text-center items-center mt-4 bg-[#F0F8FF] text-black dark:bg-[#000000] text-white"
+        >
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="project.html" class="hover:text-gray-700">Projects</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="contact.html" class="hover:text-gray-700">Contact</a></li>
+          <hr class="h-[1] w-1/2" />
+        </ul>
+      </div>
+    </nav>
+
+    <hr class="h-[1]px w-full" />
+
+    <section class="flex flex-col justify-center items-center text-center">
+      <div class="mt-4">
+        <h1 class="text-3xl font-semibold md:text-4xl">
+          Want to get in touch?
+        </h1>
+      </div>
+      <hr class="w-64 h-1 mx-auto my-4 bg-gray-500 border-0 rounded md:my-10" />
+      <div
+        class="flex justify-center text-center items-center mt-8 md:flex-wrap"
+      >
+        <ul
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+        >
+          <li>
+            <a href="mailto:anuragd275@gmail.com" target="_blank">
+              <i class="fa-regular fa-envelope fa-4x p-2"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/anuragd275" target="_blank">
+              <i class="fa-brands fa-github fa-4x p-2"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/anuragd275" target="_blank">
+              <i class="fa-brands fa-x-twitter fa-4x p-2"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/anuragd27500" target="_blank">
+              <i class="fa-brands fa-linkedin-in fa-4x p-2"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/anurag__xdd" target="_blank">
+              <i class="fa-brands fa-instagram fa-4x p-2"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/Anurag.275" target="_blank">
+              <i class="fa-brands fa-facebook fa-4x p-2"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script>
+      // Toggle the mobile menu with smooth effect
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("menu-hidden");
+          menu.classList.toggle("menu-visible");
+        });
+    </script>
+  </body>
+</html>
