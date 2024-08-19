@@ -3,93 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Anurag Dubey's GitHub Page" />
     <meta
       name="google-site-verification"
       content="O-SYicqr92HdfFs7yhEH7WkwLBYTecSiykG3uDhDYF0"
     />
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <title>Anurag Dubey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <script
       src="https://kit.fontawesome.com/991ac3604a.js"
       crossorigin="anonymous"
     ></script>
-    <title>Anurag Dubey</title>
+    <style>
+      body,
+      nav {
+        font-family: Inter;
+      }
+
+      /* Custom transition classes for smooth slide effect */
+      .menu-hidden {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .menu-visible {
+        max-height: 100vh;
+        transition: max-height 0.6s ease;
+      }
+    </style>
   </head>
-  <body class="light">
-    <div class="desktop-nav" id="desktop-navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="#" id="themeToggler" onclick="toggleTheme()">Dark Theme</a>
-    </div>
-    <nav class="menu--right mobile-nav" role="navigation">
-      <div class="menuToggle" id="mobile-menu">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul class="menuItem">
-          <li>
-            <a href="index.html">Home</a>
-            <hr />
-          </li>
+  <body class="bg-white text-black dark:bg-black dark:text-white">
+    <nav class="p-4 bg-white text-black dark:bg-black dark:text-white">
+      <div
+        class="container mx-auto flex justify-end md:justify-center items-center"
+      >
+        <!-- Logo -->
+        <!-- <div class="text-black text-xl font-bold">Logo</div> -->
 
+        <!-- Menu (Hidden on small screens) -->
+        <ul class="hidden md:flex space-x-8 text-black dark:text-white">
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
           <li>
-            <a href="about.html">About</a>
-            <hr />
+            <a href="project.html" class="hover:text-gray-700">Projects</a>
           </li>
+          <li>
+            <a href="contact.html" class="hover:text-gray-700">Contact</a>
+          </li>
+        </ul>
 
-          <li>
-            <a href="projects.html">Projects</a>
-            <hr />
-          </li>
-          <li>
-            <a href="#" id="themeToggler" onclick="toggleTheme();"
-              >Dark Theme</a
+        <!-- Hamburger Icon (Visible on small screens) -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 text-black dark:text-white"
             >
-            <hr />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div id="mobile-menu" class="h-screen menu-hidden md:hidden">
+        <ul class="flex flex-col space-y-4 text-center items-center mt-4">
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li>
+            <a href="project.html" class="hover:text-gray-700">Projects</a>
           </li>
+          <hr class="h-[1] w-1/2" />
+          <li>
+            <a href="contact.html" class="hover:text-gray-700">Contact</a>
+          </li>
+          <hr class="h-[1] w-1/2" />
         </ul>
       </div>
     </nav>
-    <section id="heroBox">
-      <div class="hero-text">
-        <h1 id="hero-h1">Python Developer. Student. Astrophile.</h1>
-      </div>
-      <div class="hero-subtext">
-        <p id="hero-p">
+
+    <hr />
+
+    <section class="flex flex-col justify-center p-8">
+      <div>
+        <h1 class="text-5xl font-semibold uppercase">
+          Python Developer. Student. Astrophile.
+        </h1>
+        <h1 class="text-xl mt-8">
           Hi, I'm Anurag, a CS undergraduate student and a Freelance Python
           Developer.
-        </p>
+        </h1>
       </div>
-      <div class="social">
-        <div class="linkBox">
-          <a href="https://www.twitter.com/anuragd275" class="socialLink" id="x"
-            ><i class="fa-brands fa-twitter fa-xl"> </i
-          ></a>
-          <a
-            href="https://www.github.com/anuragd275"
-            class="socialLink"
-            id="github"
-            ><i class="fa-brands fa-github fa-xl"> </i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/anuragd27500"
-            class="socialLink"
-            id="linkedin"
-            ><i class="fa-brands fa-linkedin-in fa-xl"> </i
-          ></a>
-        </div>
+
+      <div class="flex mt-8 text-black dark:text-white">
+        <ul class="flex">
+          <li>
+            <a href="mailto:anuragd275@gmail.com" target="_blank">
+              <i class="fa-regular fa-envelope fa-2x p-2"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/anuragd275" target="_blank">
+              <i class="fa-brands fa-github fa-2x p-2"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/anuragd275" target="_blank">
+              <i class="fa-brands fa-x-twitter fa-2x p-2"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
-    <script src="script.js"></script>
+
+    <script>
+      // Toggle the mobile menu with smooth effect
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("menu-hidden");
+          menu.classList.toggle("menu-visible");
+        });
+    </script>
   </body>
 </html>
