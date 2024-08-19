@@ -4,142 +4,268 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/991ac3604a.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Projects - Anurag</title>
+    <title>Anurag Dubey - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      #projectNavLink {
-        color: #3f72af;
+      body,
+      nav {
+        font-family: Inter;
+      }
+
+      /* Custom transition classes for smooth slide effect */
+      .menu-hidden {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .menu-visible {
+        max-height: 100vh;
+        transition: max-height 0.6s ease;
       }
     </style>
   </head>
-  <body>
-    <div class="desktop-nav" id="desktop-navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html" id="projectNavLink">Projects</a>
-      <a href="#" id="themeToggler" onclick="toggleTheme()">Dark Theme</a>
-    </div>
-    <nav class="menu--right mobile-nav" role="navigation">
-      <div class="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul class="menuItem">
-          <li>
-            <a href="index.html">Home</a>
-            <hr />
-          </li>
+  <body class="bg-white text-black dark:bg-black dark:text-white">
+    <nav class="p-4 bg-white text-black dark:bg-black dark:text-white">
+      <div
+        class="container mx-auto flex justify-end md:justify-center items-center"
+      >
+        <!-- Logo -->
+        <!-- <div class="text-black text-xl font-bold">Logo</div> -->
 
+        <!-- Menu (Hidden on small screens) -->
+        <ul class="hidden md:flex space-x-8 text-black dark:text-white">
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
           <li>
-            <a href="about.html">About</a>
-            <hr />
+            <a href="project.html" class="hover:text-gray-700">Projects</a>
           </li>
-
           <li>
-            <a href="projects.html">Projects</a>
-            <hr />
+            <a href="contact.html" class="hover:text-gray-700">Contact</a>
           </li>
+        </ul>
 
-          <li>
-            <a href="#" id="themeToggler" onclick="toggleTheme();"
-              >Dark Theme</a
+        <!-- Hamburger Icon (Visible on small screens) -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 text-black dark:text-white"
             >
-            <hr />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div id="mobile-menu" class="h-screen menu-hidden md:hidden">
+        <ul class="flex flex-col space-y-4 text-center items-center mt-4">
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li>
+            <a href="project.html" class="hover:text-gray-700">Projects</a>
           </li>
+          <hr class="h-[1] w-1/2" />
+          <li>
+            <a href="contact.html" class="hover:text-gray-700">Contact</a>
+          </li>
+          <hr class="h-[1] w-1/2" />
         </ul>
       </div>
     </nav>
-    <section id="heroBox" class="projectHero">
-      <div class="hero-text">
-        <h1 id="hero-h1">
-          Things I've made trying to put my dent in the universe.
-        </h1>
-      </div>
-      <div class="hero-subtext">
-        <p id="hero-p">
-          I've worked on tons of little projects over the years but these are
-          the ones that I'm most proud of.<br />
-          Many of them are open-source, so if you see something that piques your
-          interest,<br />
-          check out the code and contribute if you have ideas for how it can be
-          improved.
+
+    <hr />
+
+    <section class="m-2 p-4">
+      <h1 class="text-4xl font-bold md:text-5xl">
+        Things I've made trying to put my dent in the universe.
+      </h1>
+      <h1 class="mt-4 md:text-xl">
+        I've worked on tons of little projects over the years but these are the
+        ones that I'm most proud of. Many of them are open-source, so if you see
+        something that piques your interest, check out the code and contribute
+        if you have ideas for how it can be improved.
+      </h1>
+    </section>
+
+    <section
+      class="flex flex-col items-center gap-8 mt-4 md:flex-row md:w-full md:justify-center md:flex-wrap"
+    >
+      <div
+        class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Jio Saavn Bot
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          A Telegram Bot developed with Python to download any song available on
+          Jio Saavn by its title in 320kbps.
         </p>
+        <a
+          href="https://github.com/Anuragd275/jio-saavn-bot"
+          target="_blank"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-slate-200 dark:text-black dark:focus:ring-blue-800"
+        >
+          Visit Project
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div
+        class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Office Quotes API
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          A RESTful API to deliever some of the popular Quotes from the TV
+          Series "The Office".
+        </p>
+        <a
+          href="https://github.com/Anuragd275/office-quotes-api"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-slate-200 dark:text-black dark:focus:ring-blue-800"
+        >
+          Visit Project
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div
+        class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Password Generator
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          A simple JavaScript Web app that can generate strong passwords with
+          multiple varieties.
+        </p>
+        <a
+          href="https://github.com/Anuragd275/password_generator"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-slate-200 dark:text-black dark:focus:ring-blue-800"
+        >
+          Visit Project
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div
+        class="max-w-sm p-6 mb-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Cryptify
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          A react app which display basic details about Cryptocurrencies using
+          Coingecko's API.
+        </p>
+        <a
+          href="https://github.com/Anuragd275/cryptify"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-slate-200 dark:text-black dark:focus:ring-blue-800"
+        >
+          Visit Project
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
       </div>
     </section>
-    <section id="projectBox">
-      <!-- 1 -->
-      <div class="outerWrapper">
-        <div class="projectWrapper">
-          <div class="projectName">
-            <h1 class="projectTitle">Jio Saavn Bot</h1>
-          </div>
-          <div class="projectDesc">
-            <p class="descText">
-              A Telegram Bot developed with Python to download any song
-              available on Jio Saavn.
-            </p>
-          </div>
-          <div class="urlDiv">
-            <a
-              href="https://t.me/jio_saavn_songs_bot"
-              class="projectLink"
-              target="_blank"
-              >Visit Project</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- 2 -->
-      <div class="outerWrapper">
-        <div class="projectWrapper">
-          <div class="projectName">
-            <h1 class="projectTitle">Office Quotes API</h1>
-          </div>
-          <div class="projectDesc">
-            <p class="descText">
-              A RESTful API to deliever some of the popular Quotes from the TV
-              Series "The Office".
-            </p>
-          </div>
-          <div class="urlDiv">
-            <a
-              href="https://office-quotes-api.onrender.com/"
-              class="projectLink"
-              target="_blank"
-              >Visit Project</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- 3 -->
-      <div class="outerWrapper">
-        <div class="projectWrapper">
-          <div class="projectName">
-            <h1 class="projectTitle">Password Generator</h1>
-          </div>
-          <div class="projectDesc">
-            <p class="descText">
-              A simple JavaScript Web app that can generate strong passwords
-              with multiple varieties.
-            </p>
-          </div>
-          <div class="urlDiv">
-            <a
-              href="https://pass-generator-chi.vercel.app/"
-              class="projectLink"
-              target="_blank"
-              >Visit Project</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="script.js"></script>
+
+    <script>
+      // Toggle the mobile menu with smooth effect
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("menu-hidden");
+          menu.classList.toggle("menu-visible");
+        });
+    </script>
   </body>
 </html>
