@@ -3,68 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/991ac3604a.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>About - Anurag</title>
+    <title>Anurag Dubey - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      #aboutNavLink {
-        color: #3f72af;
+      body,
+      nav {
+        font-family: Inter;
+      }
+
+      /* Custom transition classes for smooth slide effect */
+      .menu-hidden {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+      .menu-visible {
+        max-height: 100vh;
+        transition: max-height 0.6s ease;
       }
     </style>
   </head>
-  <body>
-    <div class="desktop-nav" id="desktop-navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html" id="aboutNavLink">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="#" id="themeToggler" onclick="toggleTheme()">Dark Theme</a>
-    </div>
-    <nav class="menu--right mobile-nav" role="navigation">
-      <div class="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul class="menuItem">
-          <li>
-            <a href="index.html">Home</a>
-            <hr />
-          </li>
+  <body class="bg-white text-black dark:bg-black dark:text-white">
+    <nav class="p-4 bg-white text-black dark:bg-black dark:text-white">
+      <div
+        class="container mx-auto flex justify-end md:justify-center items-center"
+      >
+        <!-- Logo -->
+        <!-- <div class="text-black text-xl font-bold">Logo</div> -->
 
-          <li>
-            <a href="about.html">About</a>
-            <hr />
-          </li>
+        <!-- Menu (Hidden on small screens) -->
+        <ul class="hidden md:flex space-x-8 text-black dark:text-white">
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
+          <li><a href="project.html" class="hover:text-gray-700">Projects</a></li>
+          <li><a href="contact.html" class="hover:text-gray-700">Contact</a></li>
+        </ul>
 
-          <li>
-            <a href="projects.html">Projects</a>
-            <hr />
-          </li>
-
-          <li>
-            <a href="#" id="themeToggler" onclick="toggleTheme();"
-              >Dark Theme</a
+        <!-- Hamburger Icon (Visible on small screens) -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 text-black dark:text-white"
             >
-            <hr />
-          </li>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div id="mobile-menu" class="h-screen menu-hidden md:hidden">
+        <ul class="flex flex-col space-y-4 text-center items-center mt-4">
+          <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="about.html" class="hover:text-gray-700">About</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="project.html" class="hover:text-gray-700">Projects</a></li>
+          <hr class="h-[1] w-1/2" />
+          <li><a href="contact.html" class="hover:text-gray-700">Contact</a></li>
+          <hr class="h-[1] w-1/2" />
         </ul>
       </div>
     </nav>
-    <section id="heroBox">
-      <div class="hero-text">
-        <h1 id="hero-h1">About Me</h1>
-      </div>
-      <div class="hero-subtext">
-        <p id="hero-p">
+
+    <hr />
+
+    <section
+      class="flex flex-col justify-center text-center bg-white text-black dark:bg-black dark:text-white"
+    >
+      <div class="mt-8 p-2">
+        <h1 class="text-4xl font-bold md:text-6xl">About Me</h1>
+        <h1 class="text-xl mt-4">
           A brief introduction to me, my background, and my interests.
-        </p>
+        </h1>
       </div>
     </section>
-    <script src="script.js"></script>
+
+    <script>
+      // Toggle the mobile menu with smooth effect
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("menu-hidden");
+          menu.classList.toggle("menu-visible");
+        });
+    </script>
   </body>
 </html>
